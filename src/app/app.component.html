@@ -1,0 +1,24 @@
+<div ngIF="datos.length > 0; else nopersonas">
+  <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NOMBRE</th>
+        <th>APELLIDO</th>
+        <th>SEXO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let persona of datos">
+        <td>{{ persona.id }}</td>
+        <td>{{ persona.nombre }}</td>
+        <td>{{ persona.apellido }}</td>
+        <td>{{ persona.sexo }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #nopersonas>
+  <p>No hay datos de personas</p>
+</ng-template>
